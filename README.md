@@ -44,17 +44,41 @@ List of technical requirements I have:
 
 ### Pre-requisites
 
-* Python 3
-* Pipenv
+* Python >= 3.8.2
+* Pipenv 2020.8.13
+* NodeJS >= 14.8.0
+* Yarn >= 1.22.4
 
 ### Install
 
-Install Python dependencies:
+Install Django dependencies:
 
     pip install
 
-### Run
+Install Nuxt dependencies:
 
-Run:
+    yarn install
+
+Build Nuxt app:
+
+    yarn build
+
+### Develop
+
+Run Django app in dev mode:
 
     pipenv run python manage.py runserver
+
+Run Nuxt app in dev mode:
+
+    yarn dev
+
+### Run
+
+Run Django app:
+
+    # TODO
+
+Run Nuxt app:
+
+    yarn start
