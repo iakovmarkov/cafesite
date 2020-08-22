@@ -39,3 +39,22 @@ List of technical requirements I have:
 * [ ] Application has basic smoke test
 * [ ] JS code has unit tests
 * [ ] Python code has unit tests
+
+## Usage
+
+### Pre-requisites
+
+* Python 3
+* Pipenv
+
+### Install
+
+Install Python dependencies:
+
+    pip install
+
+### Run
+
+Run:
+
+    pipenv run python manage.py runserver
