@@ -12,9 +12,7 @@ This repo contains code for my training project in Vue.js and Django. I'm famili
 * GitHub
 * Heroku
 
-## Requirements 
-
-### Functional
+## Features
 
 List of features I want to to implement:
 
@@ -27,17 +25,6 @@ List of features I want to to implement:
 * [ ] Contact page
 * [ ] Contact page - form
 * [ ] Django Admin
-
-### Technical
-
-List of technical requirements I have:
-
-* [ ] Application is continously deployed and runs somewhere
-* [ ] Python code is linted & formatted
-* [ ] JS code is linted & formatted
-* [ ] Application has basic smoke test
-* [ ] JS code has unit tests
-* [ ] Python code has unit tests
 
 ## Usage
 
