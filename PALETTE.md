@@ -1,9 +1,11 @@
-# Palette for Dada Cafe
+# Palette
 
 Gray: #dad9e0
 Black: #2a204a
 Yellow: #ffd319
 Pink: #c233b4
+
+BG: #6900ff
 
 # Attribution
 

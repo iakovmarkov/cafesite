@@ -18,8 +18,7 @@ This repo contains code for my training project in Vue.js and Django. I'm famili
 
 List of features I want to to implement:
 
-* [ ] Index page
-* [ ] Index page - upcoming events
+* [X] Intro Page
 * [ ] Events page
 * [ ] Events page - pagination
 * [ ] Event page

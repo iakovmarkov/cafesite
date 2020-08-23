@@ -3,7 +3,7 @@ export default {
   mode: 'universal',
   target: 'server',
   head: {
-    title: 'Dada Cafe',
+    title: 'Acid Cafe',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,12 +18,8 @@ export default {
   },
   css: [
   ],
-  plugins: [
-  ],
+  plugins: ['~/plugins/ramda.js'],
   components: true,
-  buildModules: [
-    '@nuxt/typescript-build',
-  ],
   modules: [
     '@nuxtjs/bulma',
   ],
