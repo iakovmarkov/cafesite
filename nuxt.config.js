@@ -17,12 +17,10 @@ export default {
     ]
   },
   css: [
+    "static/style.scss",
   ],
   plugins: ['~/plugins/ramda.js'],
   components: true,
-  modules: [
-    '@nuxtjs/bulma',
-  ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
