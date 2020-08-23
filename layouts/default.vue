@@ -1,6 +1,14 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="layout">
+    <div>
+      <Navbar />
+    </div>
+    <div class="layout-content">
+      <Nuxt />
+    </div>
+    <div class="layout-footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -15,10 +23,28 @@ html {
   box-sizing: border-box;
 }
 
+html, body, #__nuxt, #__layout {
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.layout-content {
+  flex: 1 0 auto;
+}
+
+.layout-footer {
+  flex-shrink: 0;
 }
 </style>
