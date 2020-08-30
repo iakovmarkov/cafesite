@@ -3,32 +3,56 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a
+          role="button"
+          :class="{ 'navbar-burger': true, 'burger': true, 'is-active': isMenuOpen }"
+          aria-label="menu"
+          :aria-expanded="isMenuOpen"
+          data-target="navigation"
+          @click="toggle"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navigation" :class="{ 'navbar-menu': true, 'is-active': isMenuOpen }">
         <div class="navbar-end">
-          <NuxtLink to="menu" class="navbar-item">
-            Menu
-          </NuxtLink>
-          <NuxtLink to="events" class="navbar-item">
-            Events
-          </NuxtLink>
-          <NuxtLink to="contact" class="navbar-item">
-            Contact
-          </NuxtLink>
+          <div class="navbar-item" @click="toggle">
+            <NuxtLink to="menu">Menu</NuxtLink>
+          </div>
+          <div class="navbar-item" @click="toggle">
+            <NuxtLink to="events">Events</NuxtLink>
+          </div>
+          <div class="navbar-item" @click="toggle">
+            <NuxtLink to="contact">Contact</NuxtLink>
+          </div>
         </div>
       </div>
     </nav>
   </Container>
 </template>
+
+<script>
+import { mapMutations } from 'vuex'
+
+export default {
+  computed: {
+    isMenuOpen() {
+      return this.$store.state.menu.open
+    },
+  },
+  methods: {
+    ...mapMutations({
+      toggle: 'menu/toggle',
+    }),
+  },
+}
+</script>
 
 <style>
 </style>
