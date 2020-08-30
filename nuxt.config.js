@@ -20,6 +20,12 @@ export default {
     "static/style.scss",
   ],
   plugins: ['~/plugins/ramda.js'],
+  modules: [
+    '@nuxt/http',
+  ],
+  http: {
+    proxyHeaders: false
+  },
   components: true,
   /*
   ** Build configuration
