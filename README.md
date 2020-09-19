@@ -12,20 +12,6 @@ This repo contains code for my training project in Vue.js and Django. I'm famili
 * GitHub
 * Heroku
 
-## Features
-
-List of features I want to to implement:
-
-* [X] Intro Page
-* [ ] Events page
-* [ ] Events page - pagination
-* [ ] Event page
-* [ ] Event page - booking
-* [ ] Menu page
-* [ ] Contact page
-* [ ] Contact page - form
-* [ ] Django Admin
-
 ## Usage
 
 ### Pre-requisites

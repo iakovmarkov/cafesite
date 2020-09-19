@@ -3,8 +3,41 @@
     <span v-if="loading">
       Loading...
     </span>
-    <div v-for="item in events" :key="item.title" v-bind="item">
-      {{ item.title }} - {{ item.date }}
+    
+    <div class="columns is-multiline is-mobile">
+      <div v-for="item in events" :key="item.title" v-bind="item" class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <a :href="`events/${item.id}/`"><img :src="item.image"  :alt="item.title"></a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4"><a :href="`events/${item.id}/`">{{ item.title }}</a></p>
+                <p class="subtitle is-6">{{ item.date }}</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p>{{ item.excerpt }}</p>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <span>
+                View on <a href="#">Twitter</a>
+              </span>
+            </p>
+            <p class="card-footer-item">
+              <span>
+                Share on <a href="#">Facebook</a>
+              </span>
+            </p>
+          </footer>
+        </div>
+      </div>
     </div>
   </Container>
 </template>

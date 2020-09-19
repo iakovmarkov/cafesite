@@ -22,12 +22,34 @@ $input-border-color: transparent;
 $input-shadow: none;
 
 // Import only what you need from Bulma
-@import "../node_modules/bulma/sass/utilities/_all.sass";
-@import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/title.sass";
-@import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
-@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/bulma.sass";
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .3s ease-in;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.hero.is-image {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero.is-image .hero-body {
+  z-index: 1000;
+}
+
+.hero.is-image.is-dark:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+}

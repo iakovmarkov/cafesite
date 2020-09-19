@@ -5,10 +5,10 @@ from .models import MenuItem, Event
 class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
-        fields = ("id", "title", "description", "price")
+        fields = ("id", "title", "description", "image", "price")
 
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ("id", "title", "description", "date")
+        fields = ("id", "title", "description", "excerpt", "date", "image")

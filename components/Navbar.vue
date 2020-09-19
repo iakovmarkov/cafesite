@@ -23,13 +23,13 @@
       <div id="navigation" :class="{ 'navbar-menu': true, 'is-active': isMenuOpen }">
         <div class="navbar-end">
           <div class="navbar-item" @click="toggle">
-            <NuxtLink to="menu">Menu</NuxtLink>
+            <NuxtLink to="/menu">Menu</NuxtLink>
           </div>
           <div class="navbar-item" @click="toggle">
-            <NuxtLink to="events">Events</NuxtLink>
+            <NuxtLink to="/events">Events</NuxtLink>
           </div>
           <div class="navbar-item" @click="toggle">
-            <NuxtLink to="contact">Contact</NuxtLink>
+            <NuxtLink to="/contact">Contact</NuxtLink>
           </div>
         </div>
       </div>
