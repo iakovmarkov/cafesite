@@ -9,13 +9,15 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <a :href="`events/${item.id}/`"><img :src="item.image"  :alt="item.title"></a>
+              <NuxtLink :to="`events/${item.id}/`"><img :src="item.image"  :alt="item.title"></NuxtLink>
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4"><a :href="`events/${item.id}/`">{{ item.title }}</a></p>
+                <p class="title is-4">
+                  <NuxtLink :to="`events/${item.id}/`">{{item.title}}</NuxtLink>
+                </p>
                 <p class="subtitle is-6">{{ formatDate(item.date) }}</p>
               </div>
             </div>
