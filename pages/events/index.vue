@@ -16,7 +16,7 @@
             <div class="media">
               <div class="media-content">
                 <p class="title is-4"><a :href="`events/${item.id}/`">{{ item.title }}</a></p>
-                <p class="subtitle is-6">{{ item.date }}</p>
+                <p class="subtitle is-6">{{ formatDate(item.date) }}</p>
               </div>
             </div>
 
@@ -24,18 +24,6 @@
               <p>{{ item.excerpt }}</p>
             </div>
           </div>
-          <footer class="card-footer">
-            <p class="card-footer-item">
-              <span>
-                View on <a href="#">Twitter</a>
-              </span>
-            </p>
-            <p class="card-footer-item">
-              <span>
-                Share on <a href="#">Facebook</a>
-              </span>
-            </p>
-          </footer>
         </div>
       </div>
     </div>
@@ -46,14 +34,19 @@
 import Vue from 'vue'
 
 import { buildUrl } from '../../utils/api'
+import { formatDate } from '../../utils/date'
 
 export default Vue.extend({
   data: () => ({
     loading: true,
     events: [],
   }),
+  methods: {
+    formatDate,
+  },
   asyncData: async ({ $http }) => {
     const events = await $http.$get(buildUrl('events'))
+
     return {
       events,
       loading: false

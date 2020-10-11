@@ -53,3 +53,20 @@ $input-shadow: none;
   background: rgba(0,0,0,0.5);
   z-index: 100;
 }
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item .description {
+  font-style: italic;
+  font-size: .8em;
+}

@@ -14,19 +14,15 @@
         </div>
       </section>
       <Container>
-        <div class="columns">
+        <div class="columns my-5">
           <div class="column is-8">
             <div class="block"><p>{{ item.description }}</p></div>
           </div>
           <div class="column is-4">
-            <h5 class="title">{{ item.date }}</h5>
+            <h5 class="title">{{ date }}</h5>
             <h6 class="subtitle">When</h6>
-            <h5 class="title">Cafe</h5>
+            <h5 class="title">Cafe, main stage</h5>
             <h6 class="subtitle">Where</h6>
-            <div class="buttons">
-              <button class="button is-primary">Book online</button>
-              <a class="button is-white" href="tel:+420604779221">Call us</a>
-            </div>
           </div>
         </div>
       </Container>
@@ -38,12 +34,16 @@
 import Vue from 'vue'
 
 import { buildUrl } from '../../utils/api'
+import { formatDate } from '../../utils/date'
 
 export default Vue.extend({
   data: () => ({
     loading: true,
     event: null,
   }),
+  computed: {
+    date: ({ item }) => formatDate(item.date)
+  },
   asyncData: async ({ $http, params }) => {
     const event = await $http.$get(buildUrl('events', params.id))
     return {
