@@ -4,7 +4,7 @@
       Loading...
     </span>
     <div class="columns" v-for="category in categories" :key="category.key" v-bind="category">
-      <div class="column is-half is-offset-one-quarter my-5">
+      <div class="column is-half is-offset-one-quarter">
         <h4 class="title">{{ category.key }}</h4>
         <div v-for="item in category.value" :key="item.title" v-bind="item" class="my-4">
           <div class="menu-item">

@@ -3,10 +3,10 @@
     <div>
       <Navbar />
     </div>
-    <div class="layout-content">
+    <div class="layout-content my-5 mx-3">
       <Nuxt />
     </div>
-    <div class="layout-footer">
+    <div class="layout-footer mt-5 pt-5">
       <Footer />
     </div>
   </div>

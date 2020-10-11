@@ -55,5 +55,6 @@
   transform: var(--transform);
   top: var(--top);
   left: var(--left);
+  pointer-events: none;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <Container>
-    <div class="columns my-4">
+    <div class="columns">
       <div class="column is-offset-one-quarter is-half">
         <form @submit.prevent="handleSubmit">
           <div class="field">
