@@ -23,34 +23,26 @@ This repo contains code for my training project in Vue.js and Django. I'm famili
 
 ### Install
 
-Install Django dependencies:
+Install dependencies:
 
-    pip install
+    make install
 
-Install Nuxt dependencies:
+### Migrations
 
-    yarn install
+Create Django migrations like this:
 
-Build Nuxt app:
+    make migrations
 
-    yarn build
+And apply them:
 
-### Develop
-
-Run Django app in dev mode:
-
-    pipenv run python manage.py runserver
-
-Run Nuxt app in dev mode:
-
-    yarn dev
+    make migrate
 
 ### Run
 
-Run Django app:
+Run Django app in dev mode:
 
-    # TODO
+    make run_backend
 
-Run Nuxt app:
+Run Nuxt app in dev mode:
 
-    yarn start
+    make run_frontend
