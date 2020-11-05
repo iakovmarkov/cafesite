@@ -25,6 +25,11 @@
             <h6 class="subtitle">Where</h6>
           </div>
         </div>
+        <div class="columns my-5">
+          <div class="column is-half">
+            <Comments :id="id" />
+          </div>
+        </div>
       </Container>
     </div>
   </div>
@@ -42,9 +47,10 @@ export default Vue.extend({
     event: null,
   }),
   computed: {
-    date: ({ item }) => formatDate(item.date)
+    date: ({ item }) => formatDate(item.date),
+    id: ({ $route }) => $route.params.id,
   },
-  asyncData: async ({ $http, params }) => {
+  async asyncData({ $http, params }) {
     const event = await $http.$get(buildUrl('events', params.id))
     return {
       item: event,

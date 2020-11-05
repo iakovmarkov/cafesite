@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img src="favicon-32x32.png">
+    <img src="/favicon-32x32.png">
     <div class="text">Acid</div>
   </div>
 </template>

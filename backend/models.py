@@ -1,5 +1,6 @@
 from django.db import models
 from django import forms
+from django.utils import timezone
 
 # Create your models here.
 class Event(models.Model):
@@ -11,6 +12,16 @@ class Event(models.Model):
     
     def __str__(self):
         return f'{self.title} on {self.date}'
+# Create your models here.
+class Comment(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    text = models.TextField(max_length=2000)
+    date = models.DateTimeField(default=timezone.now())
+    event = models.ForeignKey(Event, on_delete=models.SET_NULL, null=True, blank=True)
+    
+    def __str__(self):
+        return f'{self.name} ({self.email}) commented on {self.date}'
 
 
 class MenuCategory(models.Model):

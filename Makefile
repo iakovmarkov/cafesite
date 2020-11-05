@@ -7,7 +7,7 @@ install_python:
 	pipenv sync
 
 run_frontend:
-	yarn start
+	yarn dev
 
 run_backend:
 	pipenv run python manage.py runserver

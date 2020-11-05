@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import MenuItem, Event
+from .models import MenuItem, Event, Comment
 
 
 class MenuItemSerializer(serializers.ModelSerializer):
@@ -13,3 +13,8 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ("id", "title", "description", "excerpt", "date", "image")
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ("id", "name", "email", "text", "date")
